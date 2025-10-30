@@ -1,0 +1,5 @@
+#Creates a dedicated namespace for CI/CD workloads to isolate access and resources.
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ci-cd
