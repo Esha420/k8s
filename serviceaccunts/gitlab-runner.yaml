@@ -1,0 +1,6 @@
+#Adds a ServiceAccount for CI/CD pipelines to interact with Kubernetes using scoped permissions.
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: gitlab-runner-sa
+  namespace: ci-cd
