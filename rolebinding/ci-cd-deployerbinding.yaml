@@ -1,0 +1,14 @@
+#Binds the Role to the ServiceAccount, effectively granting it permissions within the namespace.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: bind-ci-cd-deployer
+  namespace: ci-cd
+subjects:
+  - kind: ServiceAccount
+    name: gitlab-runner-sa
+    namespace: ci-cd
+roleRef:
+  kind: Role
+  name: ci-cd-deployer
+  apiGroup: rbac.authorization.k8s.io
